@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1086107147112",
+    "project_id": "dino-store-5f6dd",
+    "storage_bucket": "dino-store-5f6dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086107147112:android:943f8b94ad6c1fc0f854dd",
+        "android_client_info": {
+          "package_name": "com.example.d_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbwOyD3pRzFyxsC5t27XkAKra-kL5cQnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
