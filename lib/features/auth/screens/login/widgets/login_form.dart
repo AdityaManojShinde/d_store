@@ -1,3 +1,4 @@
+import 'package:d_store/features/auth/screens/password_config/forget_password_screen.dart';
 import 'package:d_store/features/auth/screens/signup/signup_screen.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text.dart';
@@ -29,24 +30,30 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(height: AppSizes.spaceBtwItems / 2),
             // remember me or forget password
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // remember me
-                Row(
-                  children: [
-                    Checkbox(value: true, onChanged: (value) {}),
-                    Text(
-                      AppText.rememberMe,
-                      style: Theme.of(context).textTheme.bodySmall,
-                    )
-                  ],
-                ),
+            FittedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // remember me
+                  Row(
+                    children: [
+                      Checkbox(value: true, onChanged: (value) {}),
+                      Text(
+                        AppText.rememberMe,
+                        style: Theme.of(context).textTheme.bodySmall,
+                      )
+                    ],
+                  ),
 
-                // forget password
-                TextButton(
-                    onPressed: () {}, child: const Text(AppText.forgetPassword))
-              ],
+                  // forget password
+                  TextButton(
+                      onPressed: () {
+                        DeviceUtils.navigateToScreen(
+                            context, const ForgetPasswordScreen());
+                      },
+                      child: const Text(AppText.forgetPassword))
+                ],
+              ),
             ),
             const SizedBox(height: AppSizes.spaceBtwItems),
             // sign btn

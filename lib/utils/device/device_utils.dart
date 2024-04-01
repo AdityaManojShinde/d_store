@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // add all device related function in this class
@@ -21,9 +22,10 @@ class DeviceUtils {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => screen));
   }
 
-  static void navigateReplace(BuildContext context, Widget screen) {
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => screen));
+  static void navigateReplace(BuildContext context, String route) {
+    // Navigator.of(context)
+    //     .pushReplacement(MaterialPageRoute(builder: (context) => screen));
+    context.go(route);
   }
 
   static void launchLink(

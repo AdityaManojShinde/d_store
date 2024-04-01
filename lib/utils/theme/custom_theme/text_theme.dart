@@ -5,63 +5,52 @@ class AppTextTheme {
   static TextTheme light = TextTheme(
     // Headlines
     headlineLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 32,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.bold,
         color: Colors.black),
     headlineMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 24,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w600,
         color: Colors.black),
     headlineSmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 24,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w600,
         color: Colors.black),
     // Titles
     titleLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.black),
     titleMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w400,
         color: Colors.black),
     titleSmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w600,
         color: Colors.black),
 
     // body
     bodyLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.black),
     bodyMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.black),
     bodySmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.black),
 
     //label
     labelLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 12,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.black),
     labelMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 12,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.black.withOpacity(0.5)),
   );
@@ -70,60 +59,52 @@ class AppTextTheme {
   static TextTheme dark = TextTheme(
     // Headlines
     headlineLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 32,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.bold,
         color: Colors.white),
     headlineMedium: const TextStyle().copyWith(
-        fontSize: 24, fontWeight: FontWeight.w600, color: Colors.white),
+        fontFamily: "Poppins",
+        fontWeight: FontWeight.w600,
+        color: Colors.white),
     headlineSmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 24,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w600,
         color: Colors.white),
     // Titles
     titleLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.white),
     titleMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w400,
         color: Colors.white),
     titleSmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 16,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w600,
         color: Colors.white),
 
     // body
     bodyLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.white),
     bodyMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.white),
     bodySmall: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 14,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.w500,
         color: Colors.white),
 
     //label
     labelLarge: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 12,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.white),
     labelMedium: const TextStyle().copyWith(
-        inherit: true,
-        fontSize: 12,
+        fontFamily: "Poppins",
         fontWeight: FontWeight.normal,
         color: Colors.white.withOpacity(0.5)),
   );

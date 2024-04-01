@@ -1,6 +1,24 @@
 class AppText {
   // add all title , discription, etc strings here
   static const String appTitle = "Dino Store";
+  static const String submit = "Submit";
+
+  // Email Verify
+  static const String emailVerifyTitle = "Verify your email address";
+  static const String emailVerifySubtitle =
+      "Almost there! Verify your email to unlock a world of amazing products.";
+  static const String continueBtn = "Continue";
+  static const String resendEmail = "Resend Email";
+  static const String accountCreatedTitle =
+      "Your account has been created successfully.";
+  static const String accountCreatedSubtitle =
+      "Now you can unlock exclusive deals and a smoother shopping experience.";
+  static const String forgetPwd = "Forgot Password? No Worries!";
+  static const String forgetPwdSubtitle =
+      "We understand. Enter the email address associated with your account and we'll send you a link to reset your password.";
+  static const String resetEmailSent = "Password Reset Email Sent";
+  static const String resetEmailSubtitle =
+      "A secure email with instructions on how to create a new password has been sent to your email address ";
 
   //login screen
   static const String loginTitle = "Welcome! back,";

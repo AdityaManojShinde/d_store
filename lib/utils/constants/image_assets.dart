@@ -10,4 +10,7 @@ class ImgAssets {
       "assets/images/on_bording/on_bording_find.png";
   static const String onBording_3 =
       "assets/images/on_bording/on_bording_made_easy.png";
+  static const String verifyEmail = "assets/images/signup/email_verify.png";
+  static const String accountCreated =
+      "assets/images/signup/account_created.png";
 }

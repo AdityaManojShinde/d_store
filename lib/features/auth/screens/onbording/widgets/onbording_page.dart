@@ -28,7 +28,7 @@ class OnBordingPage extends StatelessWidget {
           Text(
             title,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: AppSizes.spaceBtwItems),
           Text(
@@ -36,6 +36,7 @@ class OnBordingPage extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
+          const SizedBox(height: AppSizes.spaceBtwSection),
         ],
       ),
     );
