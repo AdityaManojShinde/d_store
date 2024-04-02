@@ -4,6 +4,7 @@ import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text.dart';
 import 'package:d_store/utils/device/device_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginForm extends StatelessWidget {
@@ -60,7 +61,10 @@ class LoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(AppText.signIn))),
+                    onPressed: () {
+                      context.go('/home');
+                    },
+                    child: const Text(AppText.signIn))),
             // create account btn
             const SizedBox(height: AppSizes.spaceBtwItems),
             SizedBox(

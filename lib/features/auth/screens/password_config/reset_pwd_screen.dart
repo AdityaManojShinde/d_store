@@ -33,6 +33,7 @@ class ResetPwdScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: AppSizes.spaceBtwSection),
+
               // title
               Text(
                 AppText.resetEmailSent,
@@ -57,12 +58,17 @@ class ResetPwdScreen extends StatelessWidget {
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {}, child: const Text('Done'))),
+                      onPressed: () {
+                        context.go('/login');
+                      },
+                      child: const Text(AppText.doneBtn))),
               const SizedBox(height: AppSizes.spaceBtwSection),
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () {}, child: const Text(AppText.resendEmail)),
+                  onPressed: () {},
+                  child: const Text(AppText.resendEmail),
+                ),
               )
             ],
           )),

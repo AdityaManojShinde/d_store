@@ -2,6 +2,7 @@ class AppText {
   // add all title , discription, etc strings here
   static const String appTitle = "Dino Store";
   static const String submit = "Submit";
+  static const String doneBtn = "Done";
 
   // Email Verify
   static const String emailVerifyTitle = "Verify your email address";
