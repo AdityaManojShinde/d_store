@@ -9,6 +9,10 @@ class DeviceUtils {
     return MediaQuery.of(ctx).size.height;
   }
 
+  static double getAppBarHeight() {
+    return kToolbarHeight;
+  }
+
   static double screenWidth(BuildContext ctx) {
     return MediaQuery.of(ctx).size.width;
   }

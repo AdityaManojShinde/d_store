@@ -4,6 +4,9 @@ class AppText {
   static const String submit = "Submit";
   static const String doneBtn = "Done";
 
+  static const String homeAppBartitle = "Good day for shopping";
+  static const String adityaShinde = "Aditya Shinde";
+
   // Email Verify
   static const String emailVerifyTitle = "Verify your email address";
   static const String emailVerifySubtitle =

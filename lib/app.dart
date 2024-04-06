@@ -70,6 +70,7 @@ class App extends StatelessWidget {
             create: (context) => NavigationControllerCubit()),
       ],
       child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
         themeMode: ThemeMode.system,

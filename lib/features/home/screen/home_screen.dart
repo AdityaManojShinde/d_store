@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
 
+class _LabelText {
+  static const String home = 'Home';
+  static const String shop = 'Shop';
+  static const String wishList = 'Wishlist';
+  static const String profile = 'Profile';
+}
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -19,10 +26,14 @@ class HomeScreen extends StatelessWidget {
             context.read<NavigationControllerCubit>().update(index);
           },
           destinations: const [
-            NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Shop'),
-            NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
-            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+            NavigationDestination(
+                icon: Icon(Iconsax.home), label: _LabelText.home),
+            NavigationDestination(
+                icon: Icon(Iconsax.shop), label: _LabelText.shop),
+            NavigationDestination(
+                icon: Icon(Iconsax.heart), label: _LabelText.wishList),
+            NavigationDestination(
+                icon: Icon(Iconsax.user), label: _LabelText.profile),
           ],
         ));
   }
