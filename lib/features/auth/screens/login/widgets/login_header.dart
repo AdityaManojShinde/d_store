@@ -14,7 +14,7 @@ class LoginHeader extends StatelessWidget {
         SizedBox(
             height: 150,
             child: Image.asset(
-              ImgAssets.login,
+              ImgAssets.splash,
               fit: BoxFit.contain,
             )),
         Text(AppText.loginTitle,

@@ -10,8 +10,9 @@ class ShopHomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // AppBar
+            // AppBar => Header
             HomeAppBar(),
+            //--------- App Body ------
           ],
         ),
       ),

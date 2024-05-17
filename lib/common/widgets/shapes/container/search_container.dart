@@ -1,3 +1,4 @@
+import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/device/device_utils.dart';
 import 'package:flutter/material.dart';
@@ -8,11 +9,13 @@ class DSearchContainer extends StatelessWidget {
       {super.key,
       this.text = 'Search in Store',
       this.icon = Iconsax.search_normal,
-      required this.showbackgrount,
-      required this.showBorder});
+      this.showbackground = true,
+      this.showBorder = true,
+      this.onPressed});
   final String text;
   final IconData icon;
-  final bool showbackgrount, showBorder;
+  final bool showbackground, showBorder;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,23 +23,36 @@ class DSearchContainer extends StatelessWidget {
     final isdark = DeviceUtils.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        width: DeviceUtils.screenWidth(context),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.grey),
-        ),
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: Colors.blueGrey,
-            ),
-            const SizedBox(width: AppSizes.spaceBtwItems),
-            Text(text, style: Theme.of(context).textTheme.bodyMedium)
-          ],
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          width: DeviceUtils.screenWidth(context),
+          decoration: BoxDecoration(
+            color: showbackground
+                ? isdark
+                    ? AppColors.bg
+                    : Colors.white
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(16),
+            border: showBorder
+                ? Border.all(color: isdark ? Colors.white : Colors.grey)
+                : null,
+          ),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                color: isdark ? Colors.white : Colors.grey,
+              ),
+              const SizedBox(width: AppSizes.spaceBtwItems),
+              Text(text,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(color: isdark ? Colors.white : Colors.black))
+            ],
+          ),
         ),
       ),
     );

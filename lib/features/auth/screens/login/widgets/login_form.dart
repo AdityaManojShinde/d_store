@@ -52,7 +52,9 @@ class LoginForm extends StatelessWidget {
                         DeviceUtils.navigateToScreen(
                             context, const ForgetPasswordScreen());
                       },
-                      child: const Text(AppText.forgetPassword))
+                      child: const Text(
+                        AppText.forgetPassword,
+                      ))
                 ],
               ),
             ),

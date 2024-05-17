@@ -30,6 +30,9 @@ dependencies:
   equatable: ^2.0.5
   iconsax: ^0.0.8
   go_router: ^13.2.2
+  auto_size_text: ^3.0.0
+  icons_launcher: ^2.1.7
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -50,9 +53,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/on_bording/
+    - assets/images/banner/
     - assets/images/login/
     - assets/images/signup/
     - assets/icons/
+    - assets/icons/categories/
     - assets/icons/brands/
     - assets/logo/
 
@@ -72,11 +77,17 @@ flutter:
 flutter_native_splash:
   color: "#ffffff"
   color_dark: "#121212"
-  image: assets/logo/logo.png
+  image: assets/logo/splash.png
 
   android_12:  
     color: "#ffffff"
     color_dark: "#121212"
-    image: assets/logo/icon.png
+    image: assets/logo/splash.png
 
   web: false
+
+icons_launcher:
+  image_path: "assets/logo/launcher_icon.png"
+  platforms:
+    android:
+      enable: true

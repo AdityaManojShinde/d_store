@@ -1,6 +1,16 @@
 class ImgAssets {
+  // shop home
+  static const String promoBanner_1 = "assets/images/banner/promo_banner_1";
+  static const String promoBanner_2 = "assets/images/banner/promo_banner_2";
+  static const String promoBanner_3 = "assets/images/banner/promo_banner_3";
+  static const String promoBanner_4 = "assets/images/banner/promo_banner_4";
   // add all image paths
   static const String logoCart = "assets/logo/logo.png";
+  static const String logoDino = "assets/logo/dino.png";
+  static const String splash = "assets/logo/splash.png";
+  static const String launchericon = "assets/logo/launcher_icon.png";
+  static const String categorySportShope =
+      "assets/icons/categories/category_sports_shoe.png";
   static const String googleLogo = "assets/logo/google.png";
   static const String facebookLogo = "assets/logo/facebook.png";
   static const String login = "assets/images/login/login.png";
