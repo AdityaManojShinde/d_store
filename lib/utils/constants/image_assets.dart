@@ -1,9 +1,9 @@
 class ImgAssets {
   // shop home
-  static const String promoBanner_1 = "assets/images/banner/promo_banner_1";
-  static const String promoBanner_2 = "assets/images/banner/promo_banner_2";
-  static const String promoBanner_3 = "assets/images/banner/promo_banner_3";
-  static const String promoBanner_4 = "assets/images/banner/promo_banner_4";
+  static const String promoBanner_1 = "assets/images/banner/promo_banner_1.png";
+  static const String promoBanner_2 = "assets/images/banner/promo_banner_2.png";
+  static const String promoBanner_3 = "assets/images/banner/promo_banner_3.png";
+  static const String promoBanner_4 = "assets/images/banner/promo_banner_4.png";
   // add all image paths
   static const String logoCart = "assets/logo/logo.png";
   static const String logoDino = "assets/logo/dino.png";

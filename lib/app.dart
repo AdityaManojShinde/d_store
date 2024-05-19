@@ -6,6 +6,7 @@ import 'package:d_store/features/auth/screens/signup/signup_screen.dart';
 import 'package:d_store/features/auth/screens/signup/verify_email.dart';
 import 'package:d_store/features/home/controller/navigation_controller.dart';
 import 'package:d_store/features/home/screen/home_screen.dart';
+import 'package:d_store/features/shop/controllers/promo_banner_indicator_cubit.dart';
 import 'package:d_store/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -68,6 +69,7 @@ class App extends StatelessWidget {
         BlocProvider<OnBordingCubit>(create: (context) => OnBordingCubit()),
         BlocProvider<NavigationControllerCubit>(
             create: (context) => NavigationControllerCubit()),
+        BlocProvider<PromoBannerCubit>(create: (context) => PromoBannerCubit()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

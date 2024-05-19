@@ -50,7 +50,7 @@ class DSearchContainer extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium!
-                      .copyWith(color: isdark ? Colors.white : Colors.black))
+                      .copyWith(color: isdark ? Colors.white : Colors.grey))
             ],
           ),
         ),
