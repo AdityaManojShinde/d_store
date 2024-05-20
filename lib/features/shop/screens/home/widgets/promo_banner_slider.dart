@@ -65,8 +65,7 @@ class PromoBannerSlider extends StatelessWidget {
 
 class _CircularIndicator extends StatelessWidget {
   const _CircularIndicator(
-      {super.key,
-      required this.count,
+      {required this.count,
       required this.size,
       this.dotColor = Colors.black,
       this.space = 3,

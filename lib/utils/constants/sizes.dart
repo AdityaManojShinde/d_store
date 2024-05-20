@@ -6,4 +6,5 @@ class AppSizes {
   static const double defaultRadius = 30;
   static const double minRadius = 20;
   static const double maxRadius = 60;
+  static const double productImgRadius = 16;
 }

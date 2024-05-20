@@ -27,6 +27,7 @@ class ShopHomeScreen extends StatelessWidget {
                   PromoBannerSlider(
                     autoPlay: true,
                   ),
+                  SizedBox(height: AppSizes.spaceBtwSection),
                   //----------- Product Cart Grid and product card----------
                   ProductCardVertical(),
                 ],

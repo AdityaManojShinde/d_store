@@ -1,4 +1,6 @@
 class ImgAssets {
+  // Products
+  static const String nikeShoe = "assets/images/products/nike_shoe.jpg";
   // shop home
   static const String promoBanner_1 = "assets/images/banner/promo_banner_1.png";
   static const String promoBanner_2 = "assets/images/banner/promo_banner_2.png";
