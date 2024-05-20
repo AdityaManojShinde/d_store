@@ -5,9 +5,10 @@ import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/image_assets.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/device/device_utils.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
+
 
 import '../../Icons/circular_icon.dart';
 import '../../text/product_title_text.dart';
@@ -20,20 +21,19 @@ class ProductCardVertical extends StatelessWidget {
     final isDark = DeviceUtils.isDarkMode(context);
     // Outer Container
     return GestureDetector(
-      onTap: () {},
-      child: Card(
-        child: Container(
-          width: 180,
-          padding: const EdgeInsets.all(1),
-          decoration: BoxDecoration(
-            // Custom BoxShadow
-            boxShadow: [ShadowStyle.verticalProductCardShadow],
-            borderRadius: BorderRadius.circular(AppSizes.productImgRadius),
-            color: isDark ? AppColors.darkGrey : AppColors.creamWhite,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+        onTap: () {},
+        child: Card(
+          child: Container(
+            width: 180,
+            padding: const EdgeInsets.all(1),
+            decoration: BoxDecoration(
+              // Custom BoxShadow
+              boxShadow: [ShadowStyle.verticalProductCardShadow],
+              borderRadius: BorderRadius.circular(AppSizes.productImgRadius),
+              color: isDark ? AppColors.darkGrey : AppColors.creamWhite,
+            ),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               //<====== Thumbnail + wishlist tag + discount tag =======>
               Container(
                 height: 180,
@@ -75,49 +75,68 @@ class ProductCardVertical extends StatelessWidget {
               const SizedBox(height: AppSizes.spaceBtwItems / 2),
               //<-------- Details------------->
               Padding(
-                padding: const EdgeInsets.only(left: 8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // product title
-                    const ProductTitleText(
-                      text: 'Blue Nike Shoe',
-                      textAlign: TextAlign.left,
-                      maxLines: 2,
-                    ),
-                    // Brand tag
-                    Row(
-                      children: [
-                        Text(
-                          'Nike',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                        const SizedBox(width: 3),
-                        const Icon(Icons.verified,
-                            color: AppColors.primary, size: 10),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "\$35.5",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style:
-                              Theme.of(context).textTheme.titleLarge!.apply(),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              )
-            ],
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // product title
+                      const ProductTitleText(
+                        text: 'Blue Nike Shoe',
+                        textAlign: TextAlign.left,
+                        maxLines: 2,
+                      ),
+                      // <----------Brand tag ----------->
+                      Row(
+                        children: [
+                          Text(
+                            'Nike',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.labelMedium,
+                          ),
+                          const SizedBox(width: 3),
+                          const Icon(Icons.verified,
+                              color: AppColors.primary, size: 10),
+                        ],
+                      ),
+                      const SizedBox(height: AppSizes.spaceBtwItems / 2),
+                      // <-------- Price Tag + Add to cart ------>
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                             Text(
+                                "\$35.5",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleLarge!
+                                    .apply(),
+                              ),
+
+                            Container(
+                              decoration:  BoxDecoration(
+                                color: isDark? AppColors.primary: AppColors.darkGrey,
+                                borderRadius: const BorderRadius.only(
+                                    bottomRight: Radius.circular(
+                                        AppSizes.productImgRadius),
+                                    topLeft: Radius.circular(
+                                        AppSizes.productImgRadius)),
+                              ),
+                              child: Center(
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Iconsax.add,
+                                      color: Colors.white,
+                                    )),
+                              ),
+                            ),
+                          ])
+                    ],
+                  )),
+            ]),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
