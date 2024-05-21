@@ -5,22 +5,24 @@ class DNotificationIcon extends StatelessWidget {
   const DNotificationIcon({
     super.key,
     required this.onPressed,
-    required this.iconColor,
-    required this.icon,
+    this.iconColor = Colors.black,
+    this.icon = Iconsax.shopping_bag,
+    this.notificationNumber = 6,
   });
   final VoidCallback onPressed;
   final Color iconColor;
   final IconData icon;
+  final int notificationNumber;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Iconsax.shopping_bag,
-              color: Colors.white,
+            onPressed: onPressed,
+            icon: Icon(
+              icon,
+              color: iconColor,
             )),
         Positioned(
           right: 0,
@@ -33,7 +35,7 @@ class DNotificationIcon extends StatelessWidget {
             ),
             child: Center(
                 child: Text(
-              '7',
+              "$notificationNumber",
               style: Theme.of(context).textTheme.labelMedium!.apply(
                     color: Colors.white,
                     fontSizeFactor: 0.8,

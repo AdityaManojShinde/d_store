@@ -1,6 +1,7 @@
 import 'package:d_store/common/styles/shadow_style.dart';
 import 'package:d_store/common/widgets/image/d_rounded_image.dart';
 import 'package:d_store/common/widgets/shapes/circular_container.dart';
+import 'package:d_store/common/widgets/text/price_tag_text.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/image_assets.dart';
 import 'package:d_store/utils/constants/sizes.dart';
@@ -8,7 +9,6 @@ import 'package:d_store/utils/device/device_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
 
 import '../../Icons/circular_icon.dart';
 import '../../text/product_title_text.dart';
@@ -104,19 +104,12 @@ class ProductCardVertical extends StatelessWidget {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                             Text(
-                                "\$35.5",
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleLarge!
-                                    .apply(),
-                              ),
-
+                            const PriceTagText(price: 450),
                             Container(
-                              decoration:  BoxDecoration(
-                                color: isDark? AppColors.primary: AppColors.darkGrey,
+                              decoration: BoxDecoration(
+                                color: isDark
+                                    ? AppColors.primary
+                                    : AppColors.darkGrey,
                                 borderRadius: const BorderRadius.only(
                                     bottomRight: Radius.circular(
                                         AppSizes.productImgRadius),
