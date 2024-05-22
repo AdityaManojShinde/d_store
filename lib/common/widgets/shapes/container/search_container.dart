@@ -11,18 +11,21 @@ class DSearchContainer extends StatelessWidget {
       this.icon = Iconsax.search_normal,
       this.showbackground = true,
       this.showBorder = true,
-      this.onPressed});
+      this.onPressed,
+      this.padding =
+          const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace)});
   final String text;
   final IconData icon;
   final bool showbackground, showBorder;
   final void Function()? onPressed;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
     final isdark = DeviceUtils.isDarkMode(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
+      padding: padding,
       child: GestureDetector(
         onTap: onPressed,
         child: Container(

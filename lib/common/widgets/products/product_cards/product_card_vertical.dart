@@ -1,12 +1,12 @@
 import 'package:d_store/common/styles/shadow_style.dart';
 import 'package:d_store/common/widgets/image/d_rounded_image.dart';
 import 'package:d_store/common/widgets/shapes/circular_container.dart';
+import 'package:d_store/common/widgets/text/brand_tag.dart';
 import 'package:d_store/common/widgets/text/price_tag_text.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/image_assets.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/device/device_utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -86,19 +86,7 @@ class ProductCardVertical extends StatelessWidget {
                         maxLines: 2,
                       ),
                       // <----------Brand tag ----------->
-                      Row(
-                        children: [
-                          Text(
-                            'Nike',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.labelMedium,
-                          ),
-                          const SizedBox(width: 3),
-                          const Icon(Icons.verified,
-                              color: AppColors.primary, size: 10),
-                        ],
-                      ),
+                      const BrandTag(brand: 'Nike'),
                       const SizedBox(height: AppSizes.spaceBtwItems / 2),
                       // <-------- Price Tag + Add to cart ------>
                       Row(

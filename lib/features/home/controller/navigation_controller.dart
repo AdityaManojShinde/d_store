@@ -8,7 +8,7 @@ class NavigationControllerCubit extends Cubit<int> {
 
   final List<Widget> screens = [
     const ShopHomeScreen(),
-    const Store(),
+    const StoreScreen(),
     Container(color: Colors.red),
     Container(color: Colors.yellow),
   ];

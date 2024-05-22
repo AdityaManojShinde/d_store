@@ -39,6 +39,7 @@ class HomeAppBar extends StatelessWidget {
                 icon: Iconsax.shopping_bag,
                 onPressed: () {},
                 iconColor: Colors.white,
+                bgColor: Colors.black.withOpacity(0.5),
               ),
             ],
           ),
