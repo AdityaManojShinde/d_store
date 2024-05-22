@@ -74,48 +74,47 @@ class ProductCardVertical extends StatelessWidget {
               ),
               const SizedBox(height: AppSizes.spaceBtwItems / 2),
               //<-------- Details------------->
-              Padding(
-                  padding: const EdgeInsets.only(left: 8),
+              const Padding(
+                  padding: EdgeInsets.only(left: 8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // product title
-                      const ProductTitleText(
+                      ProductTitleText(
                         text: 'Blue Nike Shoe',
                         textAlign: TextAlign.left,
                         maxLines: 2,
                       ),
                       // <----------Brand tag ----------->
-                      const BrandTag(brand: 'Nike'),
-                      const SizedBox(height: AppSizes.spaceBtwItems / 2),
-                      // <-------- Price Tag + Add to cart ------>
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const PriceTagText(price: 450),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: isDark
-                                    ? AppColors.primary
-                                    : AppColors.darkGrey,
-                                borderRadius: const BorderRadius.only(
-                                    bottomRight: Radius.circular(
-                                        AppSizes.productImgRadius),
-                                    topLeft: Radius.circular(
-                                        AppSizes.productImgRadius)),
-                              ),
-                              child: Center(
-                                child: IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Iconsax.add,
-                                      color: Colors.white,
-                                    )),
-                              ),
-                            ),
-                          ])
+                      BrandTag(brand: 'Nike'),
+                      SizedBox(height: AppSizes.spaceBtwItems / 2),
                     ],
                   )),
+
+              const Spacer(),
+              // <-------- Price Tag + Add to cart ------>
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: PriceTagText(price: 450),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: isDark ? AppColors.primary : AppColors.darkGrey,
+                    borderRadius: const BorderRadius.only(
+                        bottomRight: Radius.circular(AppSizes.productImgRadius),
+                        topLeft: Radius.circular(AppSizes.productImgRadius)),
+                  ),
+                  child: Center(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Iconsax.add,
+                          color: Colors.white,
+                        )),
+                  ),
+                ),
+              ])
             ]),
           ),
         ));
